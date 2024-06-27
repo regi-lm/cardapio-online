@@ -182,7 +182,7 @@ checkoutBtn.addEventListener("click", function() {
     // Enviar o pedido para a api do whatsapp
     const cartItems = cart.map((item) => {
         return (
-            `${item.name} Quantidade: (${item.quantity}) Preço: ${item.price} |`
+            `${item.name} Quantidade: (${item.quantity}) Preço: R$ ${item.price} | `
         )
     }).join("")
 
@@ -200,7 +200,7 @@ checkoutBtn.addEventListener("click", function() {
 function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 0;
+    return hora >= 18 && hora < 24;
 }
 
 const spanItem = document.getElementById("date-span")
